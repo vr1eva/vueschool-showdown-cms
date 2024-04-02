@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perks",
+  "info": {
+    "singularName": "perk",
+    "pluralName": "perks",
+    "displayName": "Benefit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "price": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::price.price",
+      "inversedBy": "perks"
+    },
+    "enabled": {
+      "type": "boolean"
+    }
+  }
+}
